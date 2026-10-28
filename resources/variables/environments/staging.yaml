@@ -1,0 +1,4 @@
+# Ambiente de homologação (staging)
+base_url: ""
+usuario_padrao: ""
+senha_padrao: ""

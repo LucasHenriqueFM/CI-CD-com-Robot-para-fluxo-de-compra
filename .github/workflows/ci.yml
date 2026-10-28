@@ -1,0 +1,35 @@
+name: CI - Testes Robot Framework
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:   # permite rodar manualmente pela aba Actions
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+
+      - name: Rodar testes de smoke (environment: dev)
+        run: robot --profile smoke --variable environment:dev tests/
+
+      - name: Arquivar relatórios
+        uses: actions/upload-artifact@v4
+        if: always()   # arquiva relatórios mesmo quando testes falham
+        with:
+          name: robot-reports
+          path: results/
+          retention-days: 7

@@ -1,0 +1,18 @@
+# Configuração do Robot Framework (requer RF >= 6.1)
+# Docs: https://robotframework.org/robotframework/using-robot-toml.html
+#
+# Perfis de execução:
+#   robot --profile smoke        -> roda só os testes com tag "smoke"
+#   robot --profile regression   -> roda só os testes com tag "regression"
+#   robot --profile debug        -> logs detalhados para depuração
+
+output-dir = "results"
+
+[profiles.smoke]
+include = "smoke"
+
+[profiles.regression]
+include = "regression"
+
+[profiles.debug]
+loglevel = "DEBUG"

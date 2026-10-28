@@ -1,0 +1,5 @@
+# Variáveis comuns a todos os ambientes.
+# Para trocar de ambiente na execução:  robot --variable environment:staging
+environment: dev
+browser: chrome
+timeout: 30s

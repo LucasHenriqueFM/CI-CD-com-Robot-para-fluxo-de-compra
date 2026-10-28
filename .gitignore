@@ -1,0 +1,28 @@
+# Robot Framework
+results/
+reports/
+screenshots/
+log.html
+report.html
+output.xml
+*.png
+*.mp4
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Variáveis locais / segredos
+.env

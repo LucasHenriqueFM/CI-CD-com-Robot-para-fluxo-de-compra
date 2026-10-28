@@ -1,0 +1,6 @@
+# Ambiente de produção
+# ATENÇÃO: não versionar credenciais reais aqui.
+# Preferível injetar via variáveis de ambiente do CI (secret) ou arquivo .env local.
+base_url: ""
+usuario_padrao: ""
+senha_padrao: ""

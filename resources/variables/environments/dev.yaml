@@ -1,0 +1,5 @@
+# Ambiente de desenvolvimento
+# TODO: substituir pela URL e credenciais reais do projeto
+base_url: https://www.saucedemo.com
+usuario_padrao: standard_user
+senha_padrao: secret_sauce
